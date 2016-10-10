@@ -71,8 +71,8 @@ int main()
 	dblAvgRain = dblTotRain / 12;
 
 	//Output
-	printf("Total rainfall for the year : %.2lf", dblTotRain);
-	printf("Average monthly rainfall : %.2lf", dblAvgRain);
+	printf("Total rainfall for the year : %.2lf\n", dblTotRain);
+	printf("Average monthly rainfall : %.2lf\n", dblAvgRain);
 	
 	return 0;
 }

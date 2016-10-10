@@ -21,6 +21,8 @@
 */
 
 #include "stdafx.h"
+#define ARRAY_SIZE 12
+#define NOT_FOUND -1
 
 
 int main()
@@ -28,7 +30,9 @@ int main()
 	//Variable declaration
 
 	double dblJan, dblFeb, dblMar, dblApr, dblMay, dblJun, dblJul, dblAug, dblSep, dblOct, dblNov, dblDec, dblTotRain, dblAvgRain;
-	
+	int arr[ARRAY_SIZE];
+	int search(const int arr[], int target, int n);
+
 	//Input
 	printf("Type rainfall for month of January\n");
 	scanf("%lf", &dblJan);
@@ -43,35 +47,35 @@ int main()
 		printf("Error : Invalid value\n");
 		return 0;
 	}
-	
+
 	printf("Type rainfall for month of March\n");
 	scanf("%lf", &dblMar);
 	if (dblMar < 0) {
 		printf("Error : Invalid value\n");
 		return 0;
 	}
-	
+
 	printf("Type rainfall for month of April\n");
 	scanf("%lf", &dblApr);
 	if (dblApr < 0) {
 		printf("Error : Invalid value\n");
 		return 0;
 	}
-	
+
 	printf("Type rainfall for month of May\n");
 	scanf("%lf", &dblMay);
 	if (dblMay < 0) {
 		printf("Error : Invalid value\n");
 		return 0;
 	}
-	
+
 	printf("Type rainfall for month of June\n");
 	scanf("%lf", &dblJun);
 	if (dblJun < 0) {
 		printf("Error : Invalid value\n");
 		return 0;
 	}
-	
+
 	printf("Type rainfall for month of July\n");
 	scanf("%lf", &dblJul);
 	if (dblJul < 0) {
@@ -99,14 +103,14 @@ int main()
 		printf("Error : Invalid value\n");
 		return 0;
 	}
-	
+
 	printf("Type rainfall for month of November\n");
 	scanf("%lf", &dblNov);
 	if (dblNov < 0) {
 		printf("Error : Invalid value\n");
 		return 0;
 	}
-	
+
 	printf("Type rainfall for month of December\n");
 	scanf("%lf", &dblDec);
 	if (dblDec < 0) {
@@ -121,7 +125,30 @@ int main()
 	//Output
 	printf("Total rainfall for the year : %.2lf\n", dblTotRain);
 	printf("Average monthly rainfall : %.2lf\n", dblAvgRain);
+
+	{
+	 int i,
+	 found = 0, /* whether or not target has been found */
+	 where; /* index where target found or NOT_FOUND */
 	
+	 /* Compares each element to target */
+	 i = 0;
+	while (!found && i < 12) {
+	if (arr[i] == 0)
+	found = 1;
+	else
+	++i;
+	
+	}
+	
+	/* Returns index of element matching target or NOT_FOUND */
+	if (found)
+	where = i;
+	else
+	where = NOT_FOUND;
+	
+	return (where);
+
 	return 0;
 }
 

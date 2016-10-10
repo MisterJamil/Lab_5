@@ -24,7 +24,45 @@
 
 
 int main()
-{	int 
-    return 0;
+{
+	double dblJan, dblFeb, dblMar, dblApr, dblMay, dblJun, dblJul, dblAug, dblSep, dblOct, dblNov, dblDec, dblTotRain, dblAvgRain;
+	
+	printf("Type rainfall for month of January\n");
+	scanf("%lf", dblJan);
+	
+	printf("Type rainfall for month of February\n");
+	scanf("%lf", dblFeb);
+	
+	printf("Type rainfall for month of March\n");
+	scanf("%lf", dblMar);
+	
+	printf("Type rainfall for month of April\n");
+	scanf("%lf", dblApr);
+	
+	printf("Type rainfall for month of May\n");
+	scanf("%lf", dblMay);
+	
+	printf("Type rainfall for month of June\n");
+	scanf("%lf", dblJun);
+	
+	printf("Type rainfall for month of July\n");
+	scanf("%lf", dblJul);
+
+	printf("Type rainfall for month of August\n");
+	scanf("%lf", dblAug);
+
+	printf("Type rainfall for month of September\n");
+	scanf("%lf", dblSep);
+
+	printf("Type rainfall for month of October\n");
+	scanf("%lf", dblOct);
+	
+	printf("Type rainfall for month of November\n");
+	scanf("%lf", dblNov);
+	
+	printf("Type rainfall for month of December\n");
+	scanf("%lf", dblDec);
+
+	return 0;
 }
 

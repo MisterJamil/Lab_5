@@ -30,6 +30,10 @@ int main()
 	double dblJan, dblFeb, dblMar, dblApr, dblMay, dblJun, dblJul, dblAug, dblSep, dblOct, dblNov, dblDec, dblTotRain, dblAvgRain;
 	
 	//Input
+	
+	if (dblJan < 0 || dblFeb < 0 || dblMar < 0 || dblApr < 0 || dblMay < 0 || dblJun < 0 || dblJul < 0 || dblAug < 0 || dblSep < 0 || dblOct < 0 || dblNov < 0 || dblDec < 0);
+	printf("Error: Invalid number");
+
 	printf("Type rainfall for month of January\n");
 	scanf("%lf", &dblJan);
 	

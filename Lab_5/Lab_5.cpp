@@ -30,45 +30,89 @@ int main()
 	double dblJan, dblFeb, dblMar, dblApr, dblMay, dblJun, dblJul, dblAug, dblSep, dblOct, dblNov, dblDec, dblTotRain, dblAvgRain;
 	
 	//Input
-	
-	if (dblJan < 0 || dblFeb < 0 || dblMar < 0 || dblApr < 0 || dblMay < 0 || dblJun < 0 || dblJul < 0 || dblAug < 0 || dblSep < 0 || dblOct < 0 || dblNov < 0 || dblDec < 0);
-	printf("Error: Invalid number");
-
 	printf("Type rainfall for month of January\n");
 	scanf("%lf", &dblJan);
-	
+	if (dblJan < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
+
 	printf("Type rainfall for month of February\n");
 	scanf("%lf", &dblFeb);
+	if (dblFeb < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
 	
 	printf("Type rainfall for month of March\n");
 	scanf("%lf", &dblMar);
+	if (dblMar < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
 	
 	printf("Type rainfall for month of April\n");
 	scanf("%lf", &dblApr);
+	if (dblApr < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
 	
 	printf("Type rainfall for month of May\n");
 	scanf("%lf", &dblMay);
+	if (dblMay < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
 	
 	printf("Type rainfall for month of June\n");
 	scanf("%lf", &dblJun);
+	if (dblJun < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
 	
 	printf("Type rainfall for month of July\n");
 	scanf("%lf", &dblJul);
+	if (dblJul < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
 
 	printf("Type rainfall for month of August\n");
 	scanf("%lf", &dblAug);
+	if (dblAug < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
 
 	printf("Type rainfall for month of September\n");
 	scanf("%lf", &dblSep);
+	if (dblSep < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
 
 	printf("Type rainfall for month of October\n");
 	scanf("%lf", &dblOct);
+	if (dblOct < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
 	
 	printf("Type rainfall for month of November\n");
 	scanf("%lf", &dblNov);
+	if (dblNov < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
 	
 	printf("Type rainfall for month of December\n");
 	scanf("%lf", &dblDec);
+	if (dblDec < 0) {
+		printf("Error : Invalid value\n");
+		return 0;
+	}
 
 	//Calculations
 	dblTotRain = dblJan + dblFeb + dblMar + dblApr + dblMay + dblJun + dblJul + dblAug + dblSep + dblOct + dblNov + dblDec;

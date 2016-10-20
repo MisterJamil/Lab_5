@@ -22,16 +22,18 @@
 
 #include "stdafx.h"
 #define ARRAY_SIZE 12
-#define NOT_FOUND -1
-
 
 int main()
 {
 	//Variable declaration
 
 	double dblJan, dblFeb, dblMar, dblApr, dblMay, dblJun, dblJul, dblAug, dblSep, dblOct, dblNov, dblDec, dblTotRain, dblAvgRain;
-	int arr[ARRAY_SIZE];
-	int search(const int arr[], int target, int n);
+	double months[ARRAY_SIZE] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	
+
+	for (int i = 0; i < ARRAY_SIZE; i++) {
+
+	}
 
 	//Input
 	printf("Type rainfall for month of January\n");
@@ -118,36 +120,57 @@ int main()
 		return 0;
 	}
 
+	//set values in array
+	months[0] = dblJan;
+	months[1] = dblFeb;
+	months[2] = dblMar;
+	months[3] = dblApr;
+	months[4] = dblMay;
+	months[5] = dblJun;
+	months[6] = dblJul;
+	months[7] = dblAug;
+	months[8] = dblSep;
+	months[9] = dblOct;
+	months[10] = dblNov;
+	months[11] = dblDec;
+
+
 	//Calculations
 	dblTotRain = dblJan + dblFeb + dblMar + dblApr + dblMay + dblJun + dblJul + dblAug + dblSep + dblOct + dblNov + dblDec;
 	dblAvgRain = dblTotRain / 12;
+
+	//alternative way to calculate
+	dblTotRain = 0;
+	for (int i = 0; i < ARRAY_SIZE; i++) {
+		dblTotRain += months[i];
+	}
+	dblAvgRain = dblTotRain / ARRAY_SIZE;
 
 	//Output
 	printf("Total rainfall for the year : %.2lf\n", dblTotRain);
 	printf("Average monthly rainfall : %.2lf\n", dblAvgRain);
 
-	{
-	 int i,
-	 found = 0, /* whether or not target has been found */
-	 where; /* index where target found or NOT_FOUND */
 	
-	 /* Compares each element to target */
-	 i = 0;
-	while (!found && i < 12) {
-	if (arr[i] == 0)
-	found = 1;
-	else
-	++i;
-	
+	int smallest = months[0];
+	int largest = months[0];
+	int smallMonthNumber = 0;
+	int largeMonthNumber = 0;
+
+	for (int i = 1; i < ARRAY_SIZE; i++) {
+		if (smallest >= months[i]) {
+			smallMonthNumber = i;
+			smallest = months[i];
+		}
+		if (largest <= months[i]) {
+			largeMonthNumber = i;
+			largest = months[i];
+		}
 	}
+
+	printf("The smallest rainfall month number was: %d\n", smallMonthNumber + 1);
+	printf("The largest rainfall month number was: %d\n", largeMonthNumber + 1);
+
 	
-	/* Returns index of element matching target or NOT_FOUND */
-	if (found)
-	where = i;
-	else
-	where = NOT_FOUND;
-	
-	return (where);
 
 	return 0;
 }
